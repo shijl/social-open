@@ -14,5 +14,4 @@ class IndexController extends Controller
 		echo $redis->get('a');
 	}
 	
-	
 }
