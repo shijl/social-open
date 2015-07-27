@@ -8,9 +8,9 @@ require(__DIR__ . '/../vendor/autoload.php');
 require(__DIR__ . '/../vendor/yiisoft/yii2/Yii.php');
 
 if(YII_ENV == 'dev') {
-	$config = require(__DIR__ . '/../config-dev/web.php');
+	$config = require(__DIR__ . '/../front/config-dev/web.php');
 } else {
-	$config = require(__DIR__ . '/../config/web.php');
+	$config = require(__DIR__ . '/../front/config/web.php');
 }
 
 (new yii\web\Application($config))->run();
