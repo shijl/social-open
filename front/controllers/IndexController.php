@@ -8,7 +8,10 @@ class IndexController extends Controller
 {	
 	public function actionIndex()
 	{
-		echo 1222;exit;
+		$redis = Yii::$app->redis;
+		$redis->set('a','b');
+		
+		echo $redis->get('a');
 	}
 	
 	
