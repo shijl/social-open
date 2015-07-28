@@ -2,9 +2,8 @@
 namespace app\controllers;
 
 use Yii;
-use yii\web\Controller;
 
-class ApiController extends Controller
+class ApiController extends BackController
 {
 	
 	public function actionList()

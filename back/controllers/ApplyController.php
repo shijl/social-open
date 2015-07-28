@@ -2,9 +2,8 @@
 namespace app\controllers;
 
 use Yii;
-use yii\web\Controller;
 
-class ApplyController extends Controller
+class ApplyController extends BackController
 {
 	
 	public function actionIndex()

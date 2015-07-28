@@ -2,9 +2,8 @@
 namespace app\controllers;
 
 use Yii;
-use yii\web\Controller;
 
-class SecretController extends Controller
+class SecretController extends BackController
 {
 	public function actionList()
 	{
