@@ -3,12 +3,10 @@ use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
-use app\assets\AppAsset;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -19,51 +17,24 @@ AppAsset::register($this);
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+    <link href="/static/css/style.css" rel="stylesheet" type="text/css" />
+    <script src="/static/js/jquery.js" type="text/javascript"></script>
 </head>
 <body>
+	 <div class="login-header">
+		<span class="logo f_l"><img width='130px' src="/static/img/login_logo.jpg"/><span class='logo-txt'>时趣-开放平台</span></span>
+		<span class="tel f_r"><em class="tel-icon"></em>400-609-2655</span>
+	</div>
+		
+      <?= $content ?>
 
-<?php $this->beginBody() ?>
-    <div class="wrap">
-        <?php
-            NavBar::begin([
-                'brandLabel' => 'My Company',
-                'brandUrl' => Yii::$app->homeUrl,
-                'options' => [
-                    'class' => 'navbar-inverse navbar-fixed-top',
-                ],
-            ]);
-            echo Nav::widget([
-                'options' => ['class' => 'navbar-nav navbar-right'],
-                'items' => [
-                    ['label' => 'Home', 'url' => ['/site/index']],
-                    ['label' => 'About', 'url' => ['/site/about']],
-                    ['label' => 'Contact', 'url' => ['/site/contact']],
-                    Yii::$app->user->isGuest ?
-                        ['label' => 'Login', 'url' => ['/site/login']] :
-                        ['label' => 'Logout (' . Yii::$app->user->identity->username . ')',
-                            'url' => ['/site/logout'],
-                            'linkOptions' => ['data-method' => 'post']],
-                ],
-            ]);
-            NavBar::end();
-        ?>
-
-        <div class="container">
-            <?= Breadcrumbs::widget([
-                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-            ]) ?>
-            <?= $content ?>
-        </div>
-    </div>
 
     <footer class="footer">
-        <div class="container">
-            <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-            <p class="pull-right"><?= Yii::powered() ?></p>
-        </div>
-    </footer>
+		<div class="footerbox">
+			<div class="adr-tel f-mod"><p class="f-item">地址：北京市朝阳区广渠路38号北京一轻大厦东区4层</p><p class="f-item">联系电话：400 609 2655   邮箱：service@social-touch.com</p></div>
+		</div>
+	</footer>
 
-<?php $this->endBody() ?>
 </body>
 </html>
 <?php $this->endPage() ?>

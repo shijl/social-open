@@ -6,13 +6,9 @@ use yii\web\Controller;
 
 class IndexController extends Controller
 {	
+	public $layout = 'main';
 	public function actionIndex()
 	{
-		$redis = Yii::$app->redis;
-		$redis->set('a','b');
-		
-		echo $redis->get('a');
+		return $this->render('index');
 	}
-	
-	
 }
