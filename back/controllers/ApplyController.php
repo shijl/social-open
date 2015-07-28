@@ -6,7 +6,6 @@ use yii\web\Controller;
 
 class ApplyController extends Controller
 {
-	public $enableCsrfValidation = false;
 	
 	public function actionIndex()
 	{
@@ -42,6 +41,14 @@ class ApplyController extends Controller
 		
 		$re = (new \app\models\Api_apply())->update_agree($id, $status);
 		if($re) {
+			// 修改成功生成秘钥
+			if($status == 1) {
+				$secret_obj = new \app\models\Secret();
+				if(!$secret_obj->get_field('apply_id', $id)) {
+					$secret_info['apply_id'] = $id;
+					$secret_obj->save_secret($secret_info);
+				}
+			}
 			echo json_encode(['code'=>10000,'message'=>'修改成功']);
 		} else {
 			echo json_encode(['code'=>10002,'message'=>'修改失败']);

@@ -3,12 +3,14 @@
 <script type="text/javascript">
 $('#apply-list').datagrid({
 	url:'/back.php/apply/list?ajax=1',
+	title: '接入申请列表',
     columns:[[
 		{field:'id', hidden:true,width:20},
         {field:'api_name',title:'接口名称',width:200,align:'center'},
         {field:'username',title:'使用人',width:200,align:'center'},
         {field:'department',title:'部门',width:200,align:'center'},
-        {field:'agree_status',title:'申请状态',width:200,align:'center'},
+        {field:'rate_val',title:'频次',width:100,align:'center'},
+        {field:'agree_status',title:'申请状态',width:100,align:'center'},
             
         {field:'operation',title:'操作',width:100,align:'center',
             formatter:function(value, rowData, index){

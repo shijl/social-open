@@ -10,4 +10,10 @@ class multi
 		$api = new set_api($user);
 		$api->multi($process);
 	}
+	
+	public static function get_api(&$process)
+	{
+		$api_info = new set_api_info();
+		$api_info->multi($process);
+	}
 }

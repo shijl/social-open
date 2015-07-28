@@ -5,6 +5,26 @@ use Yii;
 
 class Api_apply
 {
+	public function get_field($field, $value)
+	{
+		if(empty($field) || empty($value))
+			return false;
+	
+		$sql = "select * from op_api_apply where $field = '$value'";
+	
+		return Yii::$app->db->createCommand($sql)->queryAll();
+	}
+	
+	public function get_info_fieldid($ids)
+	{
+		if(empty($ids))
+			return false;
+	
+		$sql = "select * from op_api_apply where id in ($ids)";
+	
+		return Yii::$app->db->createCommand($sql)->queryAll();
+	}
+	
 	public function get_list($params=array(), $page=1, $rows=10)
 	{
 		$sql = "select count(1) as num from op_api_apply";
@@ -21,7 +41,8 @@ class Api_apply
 		
 		if(!empty($query_str))
 			$sql .= "where ".$query_str;
-	
+		
+		$sql .= " order by created_at desc ";
 		if($page >=1) {
 			$page = ($page-1)*$rows;
 			$sql .= " limit $page, $rows";
@@ -38,7 +59,8 @@ class Api_apply
 	
 	public function update_agree($id,$status)
 	{
-		$sql = "update op_api_apply set is_agree=:is_agree where id=:id";
+		$time = time();
+		$sql = "update op_api_apply set is_agree=:is_agree, agree_time=$time where id=:id";
 		$db = Yii::$app->db;
 		$command = $db->createCommand($sql);
 		$command->bindParam(':is_agree', $status, \PDO::PARAM_INT);

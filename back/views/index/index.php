@@ -4,10 +4,11 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>Open</title>
 		<link rel="stylesheet" type="text/css" href="/static/jquery-easyui-1.4.3/themes/default/easyui.css">
-        <link rel="stylesheet" type="text/css" href="/static/jquery-easyui-1.4.3/demo.css">
         <link rel="stylesheet" type="text/css" href="/static/jquery-easyui-1.4.3/themes/icon.css">
+        <link rel="stylesheet" type="text/css" href="/static/jquery-easyui-1.4.3/demo.css">
 		<script type="text/javascript" src="/static/jquery-easyui-1.4.3/jquery.min.js"></script>
 		<script type="text/javascript" src="/static/jquery-easyui-1.4.3/jquery.easyui.min.js"></script>
+		<script type="text/javascript" src="/static/jquery-easyui-1.4.3/locale/easyui-lang-zh_CN.js"></script>
 		<script type="text/javascript">
 			function open1(plugin,url){
 				if ($('#tt').tabs('exists',plugin)){
@@ -46,7 +47,9 @@
 				<li iconCls="icon-base">
 					<span>接入申请管理</span>
 						<ul>
+							<li iconCls="icon-gears"><a class="e-link" href="#" onclick="open1('接口管理','/back.php/api/list')">接口管理</a></li>
 							<li iconCls="icon-gears"><a class="e-link" href="#" onclick="open1('接入申请列表','/back.php/apply/list')">接入申请列表</a></li>
+							<li iconCls="icon-gears"><a class="e-link" href="#" onclick="open1('秘钥管理','/back.php/secret/list')">秘钥管理</a></li>
 						</ul>
 				</li>
 				

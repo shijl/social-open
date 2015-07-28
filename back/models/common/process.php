@@ -9,5 +9,5 @@ class process
 			$this->_obj = $obj;
 	}
 	
-	public function multi(&$pr){}
+	public function multi(&$process){}
 }

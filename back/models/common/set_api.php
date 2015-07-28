@@ -10,12 +10,10 @@ class set_api extends process
 			$this->_obj->multi($process);
 		}
 		if(!empty($process)) {
-			foreach ($process as $pk=>$pv) {
-				$id[] = $pv['aid'];
-			}
+			$api_info = array();
+			$ids = Assist::get_fields($process, 'aid');
 			
-			if(!empty($id)) {
-				$ids = implode(',', $id);
+			if($ids) {
 				$api_info = (new \app\models\Api())->get_info_fieldid($ids);
 			}
 			
