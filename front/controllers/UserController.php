@@ -8,7 +8,7 @@ use app\models\User;
 use app\models\UserForm;
 
 
-class UserController extends Controller
+class UserController extends BaseController
 {
 	public $enableCsrfValidation = false;
 	public $layout = false;
