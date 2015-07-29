@@ -2085,3 +2085,571 @@ $_SERVER = [
     ]
     'argc' => 1
 ]
+2015-07-29 03:01:19 [192.168.200.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\assets\AppAsset' not found' in /home/web_root/social-open/admin/views/layouts/main.php:11
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-07-29 03:01:18 [192.168.200.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => '7920ec15a8c76d032c17b68cf2357fd7b593194e3d4b87557a0571eabf7d6070a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"lGYTpfNoCAukdtgeHE9gQ42q1BLfURZk\";}'
+]
+
+$_SERVER = [
+    'MALLOC_CHECK_' => '2'
+    'MACHTYPE' => ''
+    'OSTYPE' => ''
+    'TEMP' => '/tmp'
+    'TMPDIR' => '/tmp'
+    'TMP' => '/tmp'
+    'PATH' => '/usr/local/bin:/usr/bin:/bin'
+    'HOSTNAME' => ''
+    'USER' => 'nobody'
+    'HOME' => '/'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/home/web_root/social-open/web//admin.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/admin.php'
+    'REQUEST_URI' => '/admin.php/login'
+    'DOCUMENT_URI' => '/admin.php'
+    'DOCUMENT_ROOT' => '/home/web_root/social-open/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.8.0'
+    'REMOTE_ADDR' => '192.168.200.1'
+    'REMOTE_PORT' => '53069'
+    'SERVER_ADDR' => '192.168.200.128'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'social.open.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'social.open.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:39.0) Gecko/20100101 Firefox/39.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=7920ec15a8c76d032c17b68cf2357fd7b593194e3d4b87557a0571eabf7d6070a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22lGYTpfNoCAukdtgeHE9gQ42q1BLfURZk%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PHP_SELF' => '/admin.php'
+    'REQUEST_TIME_FLOAT' => 1438138878.7558
+    'REQUEST_TIME' => 1438138878
+    'argv' => []
+    'argc' => 0
+]
+2015-07-29 03:55:32 [192.168.200.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'The use statement with non-compound name 'Yii' has no effect' in /home/web_root/social-open/admin/views/index/index.php:2
+Stack trace:
+#0 /home/web_root/social-open/vendor/yiisoft/yii2/base/View.php(325): yii\base\ErrorHandler->handleError(2, 'The use stateme...', '/home/web_root/...', 2, Array)
+#1 /home/web_root/social-open/vendor/yiisoft/yii2/base/View.php(325): yii\base\View::renderPhpFile()
+#2 /home/web_root/social-open/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/home/web_root/...', Array)
+#3 /home/web_root/social-open/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/home/web_root/...', Array, Object(app\controllers\IndexController))
+#4 /home/web_root/social-open/vendor/yiisoft/yii2/base/Controller.php(371): yii\base\View->render('index', Array, Object(app\controllers\IndexController))
+#5 /home/web_root/social-open/admin/controllers/IndexController.php(10): yii\base\Controller->render('index')
+#6 [internal function]: app\controllers\IndexController->actionIndex()
+#7 /home/web_root/social-open/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#8 /home/web_root/social-open/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 /home/web_root/social-open/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#10 /home/web_root/social-open/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('', Array)
+#11 /home/web_root/social-open/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /home/web_root/social-open/web/admin.php(16): yii\base\Application->run()
+#13 {main}
+2015-07-29 03:55:32 [192.168.200.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => '7920ec15a8c76d032c17b68cf2357fd7b593194e3d4b87557a0571eabf7d6070a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"lGYTpfNoCAukdtgeHE9gQ42q1BLfURZk\";}'
+    'PHPSESSID' => '5064907d8cc8a1f5720e25cb8e412188'
+]
+
+$_SERVER = [
+    'MALLOC_CHECK_' => '2'
+    'MACHTYPE' => ''
+    'OSTYPE' => ''
+    'TEMP' => '/tmp'
+    'TMPDIR' => '/tmp'
+    'TMP' => '/tmp'
+    'PATH' => '/usr/local/bin:/usr/bin:/bin'
+    'HOSTNAME' => ''
+    'USER' => 'nobody'
+    'HOME' => '/'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/home/web_root/social-open/web//admin.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/admin.php'
+    'REQUEST_URI' => '/admin.php'
+    'DOCUMENT_URI' => '/admin.php'
+    'DOCUMENT_ROOT' => '/home/web_root/social-open/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.8.0'
+    'REMOTE_ADDR' => '192.168.200.1'
+    'REMOTE_PORT' => '54812'
+    'SERVER_ADDR' => '192.168.200.128'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'social.open.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'social.open.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:39.0) Gecko/20100101 Firefox/39.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://social.open.com/admin.php/login'
+    'HTTP_COOKIE' => '_csrf=7920ec15a8c76d032c17b68cf2357fd7b593194e3d4b87557a0571eabf7d6070a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22lGYTpfNoCAukdtgeHE9gQ42q1BLfURZk%22%3B%7D; PHPSESSID=5064907d8cc8a1f5720e25cb8e412188'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PHP_SELF' => '/admin.php'
+    'REQUEST_TIME_FLOAT' => 1438142132.0643
+    'REQUEST_TIME' => 1438142132
+    'argv' => []
+    'argc' => 0
+]
+2015-07-29 03:55:33 [192.168.200.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'The use statement with non-compound name 'Yii' has no effect' in /home/web_root/social-open/admin/views/index/index.php:2
+Stack trace:
+#0 /home/web_root/social-open/vendor/yiisoft/yii2/base/View.php(325): yii\base\ErrorHandler->handleError(2, 'The use stateme...', '/home/web_root/...', 2, Array)
+#1 /home/web_root/social-open/vendor/yiisoft/yii2/base/View.php(325): yii\base\View::renderPhpFile()
+#2 /home/web_root/social-open/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/home/web_root/...', Array)
+#3 /home/web_root/social-open/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/home/web_root/...', Array, Object(app\controllers\IndexController))
+#4 /home/web_root/social-open/vendor/yiisoft/yii2/base/Controller.php(371): yii\base\View->render('index', Array, Object(app\controllers\IndexController))
+#5 /home/web_root/social-open/admin/controllers/IndexController.php(10): yii\base\Controller->render('index')
+#6 [internal function]: app\controllers\IndexController->actionIndex()
+#7 /home/web_root/social-open/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#8 /home/web_root/social-open/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 /home/web_root/social-open/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#10 /home/web_root/social-open/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('', Array)
+#11 /home/web_root/social-open/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /home/web_root/social-open/web/admin.php(16): yii\base\Application->run()
+#13 {main}
+2015-07-29 03:55:33 [192.168.200.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => '7920ec15a8c76d032c17b68cf2357fd7b593194e3d4b87557a0571eabf7d6070a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"lGYTpfNoCAukdtgeHE9gQ42q1BLfURZk\";}'
+    'PHPSESSID' => '5064907d8cc8a1f5720e25cb8e412188'
+]
+
+$_SERVER = [
+    'MALLOC_CHECK_' => '2'
+    'MACHTYPE' => ''
+    'OSTYPE' => ''
+    'TEMP' => '/tmp'
+    'TMPDIR' => '/tmp'
+    'TMP' => '/tmp'
+    'PATH' => '/usr/local/bin:/usr/bin:/bin'
+    'HOSTNAME' => ''
+    'USER' => 'nobody'
+    'HOME' => '/'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/home/web_root/social-open/web//admin.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/admin.php'
+    'REQUEST_URI' => '/admin.php'
+    'DOCUMENT_URI' => '/admin.php'
+    'DOCUMENT_ROOT' => '/home/web_root/social-open/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.8.0'
+    'REMOTE_ADDR' => '192.168.200.1'
+    'REMOTE_PORT' => '54812'
+    'SERVER_ADDR' => '192.168.200.128'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'social.open.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'social.open.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:39.0) Gecko/20100101 Firefox/39.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://social.open.com/admin.php/login'
+    'HTTP_COOKIE' => '_csrf=7920ec15a8c76d032c17b68cf2357fd7b593194e3d4b87557a0571eabf7d6070a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22lGYTpfNoCAukdtgeHE9gQ42q1BLfURZk%22%3B%7D; PHPSESSID=5064907d8cc8a1f5720e25cb8e412188'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PHP_SELF' => '/admin.php'
+    'REQUEST_TIME_FLOAT' => 1438142133.1356
+    'REQUEST_TIME' => 1438142133
+    'argv' => []
+    'argc' => 0
+]
+2015-07-29 03:55:33 [192.168.200.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'The use statement with non-compound name 'Yii' has no effect' in /home/web_root/social-open/admin/views/index/index.php:2
+Stack trace:
+#0 /home/web_root/social-open/vendor/yiisoft/yii2/base/View.php(325): yii\base\ErrorHandler->handleError(2, 'The use stateme...', '/home/web_root/...', 2, Array)
+#1 /home/web_root/social-open/vendor/yiisoft/yii2/base/View.php(325): yii\base\View::renderPhpFile()
+#2 /home/web_root/social-open/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/home/web_root/...', Array)
+#3 /home/web_root/social-open/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/home/web_root/...', Array, Object(app\controllers\IndexController))
+#4 /home/web_root/social-open/vendor/yiisoft/yii2/base/Controller.php(371): yii\base\View->render('index', Array, Object(app\controllers\IndexController))
+#5 /home/web_root/social-open/admin/controllers/IndexController.php(10): yii\base\Controller->render('index')
+#6 [internal function]: app\controllers\IndexController->actionIndex()
+#7 /home/web_root/social-open/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#8 /home/web_root/social-open/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 /home/web_root/social-open/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#10 /home/web_root/social-open/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('', Array)
+#11 /home/web_root/social-open/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /home/web_root/social-open/web/admin.php(16): yii\base\Application->run()
+#13 {main}
+2015-07-29 03:55:33 [192.168.200.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => '7920ec15a8c76d032c17b68cf2357fd7b593194e3d4b87557a0571eabf7d6070a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"lGYTpfNoCAukdtgeHE9gQ42q1BLfURZk\";}'
+    'PHPSESSID' => '5064907d8cc8a1f5720e25cb8e412188'
+]
+
+$_SERVER = [
+    'MALLOC_CHECK_' => '2'
+    'MACHTYPE' => ''
+    'OSTYPE' => ''
+    'TEMP' => '/tmp'
+    'TMPDIR' => '/tmp'
+    'TMP' => '/tmp'
+    'PATH' => '/usr/local/bin:/usr/bin:/bin'
+    'HOSTNAME' => ''
+    'USER' => 'nobody'
+    'HOME' => '/'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/home/web_root/social-open/web//admin.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/admin.php'
+    'REQUEST_URI' => '/admin.php'
+    'DOCUMENT_URI' => '/admin.php'
+    'DOCUMENT_ROOT' => '/home/web_root/social-open/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.8.0'
+    'REMOTE_ADDR' => '192.168.200.1'
+    'REMOTE_PORT' => '54812'
+    'SERVER_ADDR' => '192.168.200.128'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'social.open.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'social.open.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:39.0) Gecko/20100101 Firefox/39.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://social.open.com/admin.php/login'
+    'HTTP_COOKIE' => '_csrf=7920ec15a8c76d032c17b68cf2357fd7b593194e3d4b87557a0571eabf7d6070a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22lGYTpfNoCAukdtgeHE9gQ42q1BLfURZk%22%3B%7D; PHPSESSID=5064907d8cc8a1f5720e25cb8e412188'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PHP_SELF' => '/admin.php'
+    'REQUEST_TIME_FLOAT' => 1438142133.307
+    'REQUEST_TIME' => 1438142133
+    'argv' => []
+    'argc' => 0
+]
+2015-07-29 03:55:33 [192.168.200.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'The use statement with non-compound name 'Yii' has no effect' in /home/web_root/social-open/admin/views/index/index.php:2
+Stack trace:
+#0 /home/web_root/social-open/vendor/yiisoft/yii2/base/View.php(325): yii\base\ErrorHandler->handleError(2, 'The use stateme...', '/home/web_root/...', 2, Array)
+#1 /home/web_root/social-open/vendor/yiisoft/yii2/base/View.php(325): yii\base\View::renderPhpFile()
+#2 /home/web_root/social-open/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/home/web_root/...', Array)
+#3 /home/web_root/social-open/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/home/web_root/...', Array, Object(app\controllers\IndexController))
+#4 /home/web_root/social-open/vendor/yiisoft/yii2/base/Controller.php(371): yii\base\View->render('index', Array, Object(app\controllers\IndexController))
+#5 /home/web_root/social-open/admin/controllers/IndexController.php(10): yii\base\Controller->render('index')
+#6 [internal function]: app\controllers\IndexController->actionIndex()
+#7 /home/web_root/social-open/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#8 /home/web_root/social-open/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 /home/web_root/social-open/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#10 /home/web_root/social-open/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('', Array)
+#11 /home/web_root/social-open/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /home/web_root/social-open/web/admin.php(16): yii\base\Application->run()
+#13 {main}
+2015-07-29 03:55:33 [192.168.200.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => '7920ec15a8c76d032c17b68cf2357fd7b593194e3d4b87557a0571eabf7d6070a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"lGYTpfNoCAukdtgeHE9gQ42q1BLfURZk\";}'
+    'PHPSESSID' => '5064907d8cc8a1f5720e25cb8e412188'
+]
+
+$_SERVER = [
+    'MALLOC_CHECK_' => '2'
+    'MACHTYPE' => ''
+    'OSTYPE' => ''
+    'TEMP' => '/tmp'
+    'TMPDIR' => '/tmp'
+    'TMP' => '/tmp'
+    'PATH' => '/usr/local/bin:/usr/bin:/bin'
+    'HOSTNAME' => ''
+    'USER' => 'nobody'
+    'HOME' => '/'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/home/web_root/social-open/web//admin.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/admin.php'
+    'REQUEST_URI' => '/admin.php'
+    'DOCUMENT_URI' => '/admin.php'
+    'DOCUMENT_ROOT' => '/home/web_root/social-open/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.8.0'
+    'REMOTE_ADDR' => '192.168.200.1'
+    'REMOTE_PORT' => '54812'
+    'SERVER_ADDR' => '192.168.200.128'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'social.open.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'social.open.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:39.0) Gecko/20100101 Firefox/39.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://social.open.com/admin.php/login'
+    'HTTP_COOKIE' => '_csrf=7920ec15a8c76d032c17b68cf2357fd7b593194e3d4b87557a0571eabf7d6070a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22lGYTpfNoCAukdtgeHE9gQ42q1BLfURZk%22%3B%7D; PHPSESSID=5064907d8cc8a1f5720e25cb8e412188'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PHP_SELF' => '/admin.php'
+    'REQUEST_TIME_FLOAT' => 1438142133.5025
+    'REQUEST_TIME' => 1438142133
+    'argv' => []
+    'argc' => 0
+]
+2015-07-29 03:58:53 [192.168.200.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: login/logout' in /home/web_root/social-open/vendor/yiisoft/yii2/base/Controller.php:122
+Stack trace:
+#0 /home/web_root/social-open/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('logout', Array)
+#1 /home/web_root/social-open/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('login/logout', Array)
+#2 /home/web_root/social-open/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /home/web_root/social-open/web/admin.php(16): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/web_root/social-open/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /home/web_root/social-open/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/web_root/social-open/web/admin.php(16): yii\base\Application->run()
+#2 {main}
+2015-07-29 03:58:53 [192.168.200.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => '7920ec15a8c76d032c17b68cf2357fd7b593194e3d4b87557a0571eabf7d6070a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"lGYTpfNoCAukdtgeHE9gQ42q1BLfURZk\";}'
+    'PHPSESSID' => '5064907d8cc8a1f5720e25cb8e412188'
+]
+
+$_SERVER = [
+    'MALLOC_CHECK_' => '2'
+    'MACHTYPE' => ''
+    'OSTYPE' => ''
+    'TEMP' => '/tmp'
+    'TMPDIR' => '/tmp'
+    'TMP' => '/tmp'
+    'PATH' => '/usr/local/bin:/usr/bin:/bin'
+    'HOSTNAME' => ''
+    'USER' => 'nobody'
+    'HOME' => '/'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/home/web_root/social-open/web//admin.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/admin.php'
+    'REQUEST_URI' => '/admin.php/login/logout'
+    'DOCUMENT_URI' => '/admin.php'
+    'DOCUMENT_ROOT' => '/home/web_root/social-open/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.8.0'
+    'REMOTE_ADDR' => '192.168.200.1'
+    'REMOTE_PORT' => '54983'
+    'SERVER_ADDR' => '192.168.200.128'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'social.open.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'social.open.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:39.0) Gecko/20100101 Firefox/39.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://social.open.com/admin.php'
+    'HTTP_COOKIE' => '_csrf=7920ec15a8c76d032c17b68cf2357fd7b593194e3d4b87557a0571eabf7d6070a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22lGYTpfNoCAukdtgeHE9gQ42q1BLfURZk%22%3B%7D; PHPSESSID=5064907d8cc8a1f5720e25cb8e412188'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PHP_SELF' => '/admin.php'
+    'REQUEST_TIME_FLOAT' => 1438142333.0831
+    'REQUEST_TIME' => 1438142333
+    'argv' => []
+    'argc' => 0
+]
+2015-07-29 04:01:02 [192.168.200.1][-][-][error][yii\base\InvalidCallException] exception 'yii\base\InvalidCallException' with message 'Unsetting an unknown or read-only property: yii\web\Application::session' in /home/web_root/social-open/vendor/yiisoft/yii2/base/Component.php:261
+Stack trace:
+#0 /home/web_root/social-open/admin/controllers/LoginController.php(49): yii\base\Component->__unset('session')
+#1 [internal function]: app\controllers\LoginController->actionLogout()
+#2 /home/web_root/social-open/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /home/web_root/social-open/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /home/web_root/social-open/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('logout', Array)
+#5 /home/web_root/social-open/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('login/logout', Array)
+#6 /home/web_root/social-open/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /home/web_root/social-open/web/admin.php(16): yii\base\Application->run()
+#8 {main}
+2015-07-29 04:01:02 [192.168.200.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => '7920ec15a8c76d032c17b68cf2357fd7b593194e3d4b87557a0571eabf7d6070a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"lGYTpfNoCAukdtgeHE9gQ42q1BLfURZk\";}'
+    'PHPSESSID' => '5064907d8cc8a1f5720e25cb8e412188'
+]
+
+$_SERVER = [
+    'MALLOC_CHECK_' => '2'
+    'MACHTYPE' => ''
+    'OSTYPE' => ''
+    'TEMP' => '/tmp'
+    'TMPDIR' => '/tmp'
+    'TMP' => '/tmp'
+    'PATH' => '/usr/local/bin:/usr/bin:/bin'
+    'HOSTNAME' => ''
+    'USER' => 'nobody'
+    'HOME' => '/'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/home/web_root/social-open/web//admin.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/admin.php'
+    'REQUEST_URI' => '/admin.php/login/logout'
+    'DOCUMENT_URI' => '/admin.php'
+    'DOCUMENT_ROOT' => '/home/web_root/social-open/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.8.0'
+    'REMOTE_ADDR' => '192.168.200.1'
+    'REMOTE_PORT' => '55025'
+    'SERVER_ADDR' => '192.168.200.128'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'social.open.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'social.open.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:39.0) Gecko/20100101 Firefox/39.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://social.open.com/admin.php'
+    'HTTP_COOKIE' => '_csrf=7920ec15a8c76d032c17b68cf2357fd7b593194e3d4b87557a0571eabf7d6070a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22lGYTpfNoCAukdtgeHE9gQ42q1BLfURZk%22%3B%7D; PHPSESSID=5064907d8cc8a1f5720e25cb8e412188'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PHP_SELF' => '/admin.php'
+    'REQUEST_TIME_FLOAT' => 1438142462.7193
+    'REQUEST_TIME' => 1438142462
+    'argv' => []
+    'argc' => 0
+]
+2015-07-29 04:04:43 [192.168.200.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: api/' in /home/web_root/social-open/vendor/yiisoft/yii2/base/Controller.php:122
+Stack trace:
+#0 /home/web_root/social-open/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#1 /home/web_root/social-open/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('api', Array)
+#2 /home/web_root/social-open/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /home/web_root/social-open/web/admin.php(16): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/web_root/social-open/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /home/web_root/social-open/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/web_root/social-open/web/admin.php(16): yii\base\Application->run()
+#2 {main}
+2015-07-29 04:04:43 [192.168.200.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => '7920ec15a8c76d032c17b68cf2357fd7b593194e3d4b87557a0571eabf7d6070a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"lGYTpfNoCAukdtgeHE9gQ42q1BLfURZk\";}'
+    'PHPSESSID' => '5064907d8cc8a1f5720e25cb8e412188'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MALLOC_CHECK_' => '2'
+    'MACHTYPE' => ''
+    'OSTYPE' => ''
+    'TEMP' => '/tmp'
+    'TMPDIR' => '/tmp'
+    'TMP' => '/tmp'
+    'PATH' => '/usr/local/bin:/usr/bin:/bin'
+    'HOSTNAME' => ''
+    'USER' => 'nobody'
+    'HOME' => '/'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/home/web_root/social-open/web//admin.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/admin.php'
+    'REQUEST_URI' => '/admin.php/api'
+    'DOCUMENT_URI' => '/admin.php'
+    'DOCUMENT_ROOT' => '/home/web_root/social-open/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.8.0'
+    'REMOTE_ADDR' => '192.168.200.1'
+    'REMOTE_PORT' => '55113'
+    'SERVER_ADDR' => '192.168.200.128'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'social.open.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'social.open.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:39.0) Gecko/20100101 Firefox/39.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=7920ec15a8c76d032c17b68cf2357fd7b593194e3d4b87557a0571eabf7d6070a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22lGYTpfNoCAukdtgeHE9gQ42q1BLfURZk%22%3B%7D; PHPSESSID=5064907d8cc8a1f5720e25cb8e412188'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PHP_SELF' => '/admin.php'
+    'REQUEST_TIME_FLOAT' => 1438142683.3528
+    'REQUEST_TIME' => 1438142683
+    'argv' => []
+    'argc' => 0
+]
+2015-07-29 05:05:33 [192.168.200.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: api/' in /home/web_root/social-open/vendor/yiisoft/yii2/base/Controller.php:122
+Stack trace:
+#0 /home/web_root/social-open/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#1 /home/web_root/social-open/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('api/', Array)
+#2 /home/web_root/social-open/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /home/web_root/social-open/web/admin.php(16): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/web_root/social-open/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /home/web_root/social-open/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/web_root/social-open/web/admin.php(16): yii\base\Application->run()
+#2 {main}
+2015-07-29 05:05:32 [192.168.200.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => '7920ec15a8c76d032c17b68cf2357fd7b593194e3d4b87557a0571eabf7d6070a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"lGYTpfNoCAukdtgeHE9gQ42q1BLfURZk\";}'
+    'PHPSESSID' => '5064907d8cc8a1f5720e25cb8e412188'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MALLOC_CHECK_' => '2'
+    'MACHTYPE' => ''
+    'OSTYPE' => ''
+    'TEMP' => '/tmp'
+    'TMPDIR' => '/tmp'
+    'TMP' => '/tmp'
+    'PATH' => '/usr/local/bin:/usr/bin:/bin'
+    'HOSTNAME' => ''
+    'USER' => 'nobody'
+    'HOME' => '/'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/home/web_root/social-open/web//admin.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/admin.php'
+    'REQUEST_URI' => '/admin.php/api/'
+    'DOCUMENT_URI' => '/admin.php'
+    'DOCUMENT_ROOT' => '/home/web_root/social-open/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.8.0'
+    'REMOTE_ADDR' => '192.168.200.1'
+    'REMOTE_PORT' => '56415'
+    'SERVER_ADDR' => '192.168.200.128'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'social.open.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'social.open.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:39.0) Gecko/20100101 Firefox/39.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=7920ec15a8c76d032c17b68cf2357fd7b593194e3d4b87557a0571eabf7d6070a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22lGYTpfNoCAukdtgeHE9gQ42q1BLfURZk%22%3B%7D; PHPSESSID=5064907d8cc8a1f5720e25cb8e412188'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PHP_SELF' => '/admin.php'
+    'REQUEST_TIME_FLOAT' => 1438146332.9923
+    'REQUEST_TIME' => 1438146332
+    'argv' => []
+    'argc' => 0
+]

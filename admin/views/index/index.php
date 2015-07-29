@@ -34,7 +34,6 @@
 							<div style="color:#fff;font-size:22px;font-weight:bold;">
 								<a href="" style="color:#0e2d5f;font-size:22px;font-weight:bold;text-decoration:none">Open Platform</a>
 							</div>
-							
 						</td>
 						
 					</tr>
@@ -52,6 +51,7 @@
 							<li iconCls="icon-gears"><a class="e-link" href="#" onclick="open1('秘钥管理','/admin.php/secret/list')">秘钥管理</a></li>
 						</ul>
 				</li>
+				<li iconCls="icon-gears"><a class="e-link" href="/admin.php/login/logout">退出</a></li>
 				
 			</ul>
 		</div>
