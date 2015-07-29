@@ -63,7 +63,8 @@ class Secret
 			$re[$rk]['uid'] = isset($apply_tmp[$rv['apply_id']]['uid']) ? $apply_tmp[$rv['apply_id']]['uid'] : '';
 			$re[$rk]['aid'] = isset($apply_tmp[$rv['apply_id']]['aid']) ? $apply_tmp[$rv['apply_id']]['aid'] : '';
 			$re[$rk]['rate'] = isset($apply_tmp[$rv['apply_id']]['rate']) ? $apply_tmp[$rv['apply_id']]['rate'] : '';
-			
+			$re[$rk]['is_agree'] = isset($apply_tmp[$rv['apply_id']]['is_agree']) ? $apply_tmp[$rv['apply_id']]['is_agree'] : '';
+				
 		}
 		
 		common\multi::get_multi($re);
