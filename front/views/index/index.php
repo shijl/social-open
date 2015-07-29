@@ -120,7 +120,9 @@ function reg(){
 		success : function(e){
 			if(e.success){
 				alert('注册成功');
-				window.location.assign('/apply');
+				$('#login_username').val(_username);
+				$('#login_password').val(_password);
+				check();
 				return false;
 			}else{
 				alert(e.message);
