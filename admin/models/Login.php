@@ -30,11 +30,11 @@ class Login
 		if(empty($username) || empty($password)) {
 			return false;
 		}
-		
+		$password = md5($password);
 		$sql = "select * from op_admin where username=:username and password=:password";
 		$command = Yii::$app->db->createCommand($sql);
 		$command->bindParam(':username', $username);
-		$command->bindParam(':password', md5($password));
+		$command->bindParam(':password', $password);
 		return $command->queryOne();
 	}
 }
