@@ -10,12 +10,10 @@ class set_user extends process
 			$this->_obj->multi($process);
 		}
 		if(!empty($process)) {
-			foreach ($process as $pk=>$pv) {
-				$id[] = $pv['uid'];
-			}
+			$user_info = array();
+			$ids = Assist::get_fields($process, 'uid');
 			
-			if(!empty($id)) {
-				$ids = implode(',', $id);
+			if($ids) {
 				$user_info = (new \app\models\User())->get_info_fieldid($ids);
 			}
 			
