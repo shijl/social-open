@@ -17,7 +17,10 @@ class BaseController extends Controller{
 						'actions' => ['index','create','login'],
 						'roles' => ['?'],
 					],
-
+					[
+					'allow' => true,
+					'roles' => ['@'],
+					],
 				],
 			],
         ];

@@ -23,7 +23,7 @@ nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
 img{max-width:100%;}
 /*end reset*/
 /****-----start-body----****/
-body {color: #666;font: 12px/140% "Microsoft YaHei","Î¢ÈíÑÅºÚ",Helvetica,"ºÚÌå",Arial,Tahoma;margin: 0;text-align: left;}
+body {height:100%;color: #666;font: 12px/140% "Microsoft YaHei","Î¢ÈíÑÅºÚ",Helvetica,"ºÚÌå",Arial,Tahoma;margin: 0;text-align: left;}
 
 .main{
 	margin:7em auto 0;
@@ -540,7 +540,7 @@ input[type=checkbox].css-checkbox10:checked + label i.css-label10 {
 	margin: 7px 5px 9px 0px;
 	}
 }
-.login-header{width: 1020px;margin: 0 auto;height: 85px;line-height: 85px;background: #ffffff;}
+.login-header{width: 1090px;margin: 0 auto;height: 85px;line-height: 85px;background: #ffffff;}
 .logo-txt{font-size: 24px;color: #0091dd;margin-left: 15px;}
 .tel-icon{display: inline-block;width: 36px;height: 36px;background: url(http://static.biz.social-touch.com/scrm/img/login_icons.png) 0 0px no-repeat;vertical-align: middle;margin-right: 5px;}
 .f_l{float:left;}
@@ -551,3 +551,120 @@ input[type=checkbox].css-checkbox10:checked + label i.css-label10 {
 .adr-tel{margin-right: 30px;}
 .f-item{color: #999999;font-size: 12px;vertical-align: middle;margin-top: 10px;}
 /*----//end-responsive design-----*/
+table {
+    *border-collapse: collapse; /* IE7 and lower */
+    border-spacing: 0;
+    width: 100%;
+	margin-bottom:20px;  
+}
+
+.bordered {
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px #ccc; 
+    -moz-box-shadow: 0 1px 1px #ccc; 
+    box-shadow: 0 1px 1px #ccc;         
+}
+
+.bordered tr:hover {
+    background: #fbf8e9;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;     
+}    
+    
+.bordered td, .bordered th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;    
+}
+
+.bordered th {
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+}
+
+.bordered td:first-child, .bordered th:first-child {
+    border-left: none;
+}
+
+.bordered th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+.bordered th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.bordered th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+.bordered tr:last-child td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.bordered tr:last-child td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+
+#pub-header {
+    color: #666;
+    height: 50px;
+    margin: 0 20px;
+}
+
+#pub-logo {
+	margin-top:15px;
+    float: left;
+    font-size: 12px;
+    height: 50px;
+    line-height: 50px;
+}
+
+#pub-logo b {
+    color: #0091d0;
+    display: inline-block;
+    font-size: 18px;
+    margin-left: 14px;
+}
+
+#top-msg {
+    cursor: pointer;
+    float: right;
+}
+.fix::after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.fix {
+    display: block;
+}

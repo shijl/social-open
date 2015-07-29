@@ -21,12 +21,29 @@ use yii\widgets\Breadcrumbs;
     <script src="/static/js/jquery.js" type="text/javascript"></script>
 </head>
 <body>
+<?php 
+	if(Yii::$app->getUser()->getIdentity()){
+?>
 	 <div class="login-header">
+		<div id="pub-logo">
+			<span class="logo f_l"><img width='130px' src="/static/img/login_logo.jpg"/><span class='logo-txt'>时趣-开放平台</span></span>
+		</div>
+		<div id="top-msg">
+
+		
+				<span><?php echo Yii::$app->getUser()->getIdentity()->username ?></span>
+				<a href="/user/logout">[ 退出登录 ]</a>
+		
+		</div>
+	</div>
+<?php }else{?>
+	<div class="login-header">
 		<span class="logo f_l"><img width='130px' src="/static/img/login_logo.jpg"/><span class='logo-txt'>时趣-开放平台</span></span>
 		<span class="tel f_r"><em class="tel-icon"></em>400-609-2655</span>
 	</div>
-		
-      <?= $content ?>
+<?php }?>
+
+    <?= $content ?>
 
 
     <footer class="footer">

@@ -83,7 +83,7 @@ class UserController extends BaseController
 	public function actionLogout()
 	{
 		Yii::$app->getUser()->logout();
-	
-		return true;
+		echo "<script> alert('退出登录成功！'); </script>";
+		//$this->redirect('/apply');
 	}
 }

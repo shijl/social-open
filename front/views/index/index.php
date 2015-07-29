@@ -75,7 +75,7 @@ function check(){
 		dataType : 'json',
 		success : function(e){
 			if(e.success){
-				alert('登录成功');
+				window.location.assign('/apply');
 				return false;
 			}else{
 				alert(e.message);
@@ -120,6 +120,7 @@ function reg(){
 		success : function(e){
 			if(e.success){
 				alert('注册成功');
+				window.location.assign('/apply');
 				return false;
 			}else{
 				alert(e.message);
