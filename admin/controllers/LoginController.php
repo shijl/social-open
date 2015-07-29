@@ -36,8 +36,8 @@ class LoginController extends Controller
 				echo json_encode(array('code'=>10004, 'message'=>'用户已锁定，请联系管理员'));
 				exit;
 			}
-			Yii::$app->session['uid'] = $check_result['id'];
-			Yii::$app->session['username'] = $check_result['username'];
+			Yii::$app->session['admin_uid'] = $check_result['id'];
+			Yii::$app->session['admin_username'] = $check_result['username'];
 			echo json_encode(array('code'=>10000, 'message'=>'登陆成功'));
 		} else {
 			echo json_encode(array('code'=>10009, 'message'=>'非法提交')); 
@@ -46,8 +46,8 @@ class LoginController extends Controller
 	
 	public function actionLogout()
 	{
-		unset(Yii::$app->session['uid']);
-		unset(Yii::$app->session['username']);
+		unset(Yii::$app->session['admin_uid']);
+		unset(Yii::$app->session['admin_username']);
 		header("Location:/admin.php/login");
 	}
 }

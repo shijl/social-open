@@ -8,7 +8,7 @@ class BackController extends Controller
 {
 	public function init()
 	{
-		if(!isset(Yii::$app->session['uid']) || !isset(Yii::$app->session['username'])) {
+		if(!isset(Yii::$app->session['admin_uid']) || !isset(Yii::$app->session['admin_username'])) {
 			header("Location:/admin.php/login");
 		}
 	}
