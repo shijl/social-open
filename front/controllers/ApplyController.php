@@ -12,7 +12,7 @@ class ApplyController extends BaseController
 	public $enableCsrfValidation = false;
 	public function actionIndex(){
 		$user_id = Yii::$app->getUser()->getIdentity()->id;
-		$sql = "select apply.id,apply.rate,apply.is_agree,apply.created_at,apply.agree_time,api.api_name,api.api_url,api.type from op_api_apply as apply left join op_api as api on apply.aid = api.id where uid = '".$user_id."'";
+		$sql = "select apply.id,apply.rate,apply.is_agree,apply.created_at,apply.agree_time,api.api_name,api.api_url,api.type from op_api_apply as apply left join op_api as api on apply.aid = api.id where uid = '".$user_id."' order by apply.created_at desc";
 		$query = Apply::findBySql($sql)->all();
 		$output=[];
 		foreach($query as $model){
