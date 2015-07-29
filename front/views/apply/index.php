@@ -17,25 +17,29 @@ $this->title = '接口申请列表';
 	        <th>操作</th>
 	    </tr>
 	    </thead>
-	    <?php foreach($list as $key=>$val){?>
-		    <tr data-id="<?php echo $val['id']; ?>">
-		        <td><?php echo $val['api_name'];?></td>        
-		        <td><?php echo $val['api_url'];?></td>        
-		        <td><?php echo $val['api_type'];?></td>        
-		        <td><?php echo $val['rate'];?></td>        
-		        <td><?php echo $val['created_at'];?></td>
-		        <td><?php echo $val['is_agree'];?></td>             
-		        <td><?php echo $val['agree_time'];?></td>        
-		        <td>
-		        	<?php 
-		        		if($val['is_agree']=='通过'){
-		        			echo '<a disabled class="key" style="cursor: pointer;">查看密钥</a>';
-		        		}else{
-		        			echo '<a disabled>查看密钥</a>';
-		        		}
-		        	?>
-		        </td>        
-		    </tr>   
+	    <?php if(!empty($list)){?>
+		    <?php foreach($list as $key=>$val){?>
+			    <tr data-id="<?php echo $val['id']; ?>">
+			        <td><?php echo $val['api_name'];?></td>        
+			        <td><?php echo $val['api_url'];?></td>        
+			        <td><?php echo $val['api_type'];?></td>        
+			        <td><?php echo $val['rate'];?></td>        
+			        <td><?php echo $val['created_at'];?></td>
+			        <td><?php echo $val['is_agree'];?></td>             
+			        <td><?php echo $val['agree_time'];?></td>        
+			        <td>
+			        	<?php 
+			        		if($val['is_agree']=='通过'){
+			        			echo '<a disabled class="key" style="cursor: pointer;">查看密钥</a>';
+			        		}else{
+			        			echo '<a disabled>查看密钥</a>';
+			        		}
+			        	?>
+			        </td>        
+			    </tr>   
+			<?php }?>
+		<?php }else{?>
+				<tr><td colspan="8" style="text-align:center">暂无接口申请记录</td></tr>
 		<?php }?>
 	</table>
 </div>
