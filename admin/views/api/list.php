@@ -37,7 +37,7 @@
     
 <script type="text/javascript">
 $('#api-list').datagrid({
-	url:'/back.php/api/list?ajax=1',
+	url:'/admin.php/api/list?ajax=1',
 	title: '接口列表',
 	toolbar:[{
 		text:'增加接口',
@@ -71,7 +71,7 @@ $('#api-list').datagrid({
 
 function status(id,status)
 {
-	$.getJSON('/back.php/api/status', {id:id,status:status}, function(data){
+	$.getJSON('/admin.php/api/status', {id:id,status:status}, function(data){
 		if(data.code == 10000){
 			$.messager.alert('提示','保存成功');
 		} else {
@@ -89,7 +89,7 @@ function openDialog()
 
 function saveView(){
     $('#fm').form('submit',{
-        url: '/back.php/api/add',
+        url: '/admin.php/api/add',
         onSubmit: function(){
             return $(this).form('validate');
         },

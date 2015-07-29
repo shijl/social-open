@@ -2,7 +2,7 @@
 
 <script type="text/javascript">
 $('#secret-list').datagrid({
-	url:'/back.php/secret/list?ajax=1',
+	url:'/admin.php/secret/list?ajax=1',
 	title:'秘钥管理',
     columns:[[
 		{field:'id', hidden:true,width:20},

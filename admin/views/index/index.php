@@ -47,9 +47,9 @@
 				<li iconCls="icon-base">
 					<span>接入申请管理</span>
 						<ul>
-							<li iconCls="icon-gears"><a class="e-link" href="#" onclick="open1('接口管理','/back.php/api/list')">接口管理</a></li>
-							<li iconCls="icon-gears"><a class="e-link" href="#" onclick="open1('接入申请列表','/back.php/apply/list')">接入申请列表</a></li>
-							<li iconCls="icon-gears"><a class="e-link" href="#" onclick="open1('秘钥管理','/back.php/secret/list')">秘钥管理</a></li>
+							<li iconCls="icon-gears"><a class="e-link" href="#" onclick="open1('接口管理','/admin.php/api/list')">接口管理</a></li>
+							<li iconCls="icon-gears"><a class="e-link" href="#" onclick="open1('接入申请列表','/admin.php/apply/list')">接入申请列表</a></li>
+							<li iconCls="icon-gears"><a class="e-link" href="#" onclick="open1('秘钥管理','/admin.php/secret/list')">秘钥管理</a></li>
 						</ul>
 				</li>
 				

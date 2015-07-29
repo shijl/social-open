@@ -2,7 +2,7 @@
 
 <script type="text/javascript">
 $('#apply-list').datagrid({
-	url:'/back.php/apply/list?ajax=1',
+	url:'/admin.php/apply/list?ajax=1',
 	title: '接入申请列表',
     columns:[[
 		{field:'id', hidden:true,width:20},
@@ -34,7 +34,7 @@ $('#apply-list').datagrid({
 
 function agree(id,status)
 {
-	$.getJSON('/back.php/apply/agree', {id:id,status:status}, function(data){
+	$.getJSON('/admin.php/apply/agree', {id:id,status:status}, function(data){
 		if(data.code == 10000){
 			$.messager.alert('提示','保存成功');
 		} else {
