@@ -3,7 +3,7 @@ use yii\helpers\Html;
 $this->title = '接口申请列表';
 ?>
 <div class="main" style="margin-top:-1px;">
-	<h2><span>接口申请列表</span><button onclick="javascript:window.location.assign('/api');" style="background-color:#dce9f9;float:right">接口申请</button></h2>
+	<h2><span>接口申请列表</span><button onclick="javascript:window.location.assign('/apis');" style="background-color:#dce9f9;float:right">接口申请</button></h2>
 	<table class="bordered">
 	    <thead>
 	    <tr>

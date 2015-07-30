@@ -6,7 +6,7 @@ use yii\web\Controller;
 use app\models\Apply;
 use app\models\Api;
 
-class ApiController extends BaseController
+class ApisController extends BaseController
 {	
 	public $layout = 'main';
 	public function actionIndex(){
