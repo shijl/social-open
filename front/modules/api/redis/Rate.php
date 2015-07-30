@@ -11,7 +11,7 @@ class Rate
 		//先查询
 		$result = $this->get_rate($key);
 		if(empty($result)) {
-			return $redis->setex($key,1);
+			return $redis->setex($key,60,1);
 		} else {
 			return $redis->incr($key);
 		}
@@ -25,7 +25,7 @@ class Rate
 	public function check_rate($key,$rate)
 	{
 		$rate_re = $this->get_rate($key);
-		if($rate_re >= $rate){
+		if($rate_re > $rate){
 			return false;
 		} else {
 			$this->set_rate($key);
