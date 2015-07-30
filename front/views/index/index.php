@@ -111,6 +111,11 @@ function reg(){
 		$('#error').html("请填写项目");
 		return false;
 	}
+
+    if(_qq == ''){
+		$('#error').html("请填写qq");
+		return false;
+	}
 	
 	$.ajax({
 		url : 'user/create',
