@@ -12,7 +12,7 @@ class Secret
 	
 		$sql = "select * from op_key where $field = '$value'";
 	
-		return Yii::$app->db->createCommand($sql)->queryAll();
+		return Yii::$app->db->createCommand($sql)->queryOne();
 	}
 	
 	public function get_info_fieldid($ids)

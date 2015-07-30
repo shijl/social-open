@@ -22,7 +22,6 @@ class IndexController extends Controller
 			exit;
 		}
 		// 查找apply_id
-		$result = array_shift($result);
 		$apply_id = $result['apply_id'];
 		$apply_obj = new \app\modules\api\models\Api_apply();
 		$apply_re = $apply_obj->get_field('id', $apply_id);
