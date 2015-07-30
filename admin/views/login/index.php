@@ -14,7 +14,7 @@
     <div id="w" class="easyui-window" title="请先登录" data-options="modal:true,closable:false,collapsible:false,minimizable:false,maximizable:false,iconCls:'icon-man'" buttons="#login-buttons" style="width:400px;padding:20px 70px 20px 70px;">
         <form id="fm" method="post" novalidate>
 	        <div style="margin-bottom:10px">
-	            <input class="easyui-textbox" id="logname" name="username" style="width:100%;height:30px;padding:12px" data-options="prompt:'登录邮箱',iconCls:'icon-man',iconWidth:38,required:true">
+	            <input class="easyui-textbox" id="logname" name="username" style="width:100%;height:30px;padding:12px" data-options="prompt:'登录用户',iconCls:'icon-man',iconWidth:38,required:true">
 	        </div>
 	        <div style="margin-bottom:20px">
 	            <input class="easyui-textbox" id="logpass" name="password" type="password" style="width:100%;height:30px;padding:12px" data-options="prompt:'登录密码',iconCls:'icon-lock',iconWidth:38,required:true">
