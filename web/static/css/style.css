@@ -545,7 +545,7 @@ input[type=checkbox].css-checkbox10:checked + label i.css-label10 {
 .tel-icon{display: inline-block;width: 36px;height: 36px;background: url(http://static.biz.social-touch.com/scrm/img/login_icons.png) 0 0px no-repeat;vertical-align: middle;margin-right: 5px;}
 .f_l{float:left;}
 .f_r{float:right;}
-.footer {background:#1b1b27 none repeat;height: 88px;position:absolute; bottom:0;width:100%;}
+.footer {background:#1b1b27 none repeat;height: 88px;}
 .footerbox{width: 1020px;margin: 0 auto;}
 .f-mod{display: inline-block;padding-top: 10px;margin-left:400px;}
 .adr-tel{margin-right: 30px;}
