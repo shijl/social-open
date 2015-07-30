@@ -23,7 +23,7 @@ nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
 img{max-width:100%;}
 /*end reset*/
 /****-----start-body----****/
-body {height:100%;color: #666;font: 12px/140% "Microsoft YaHei","Î¢ÈíÑÅºÚ",Helvetica,"ºÚÌå",Arial,Tahoma;margin: 0;text-align: left;}
+body {height:100%;color: #666;font: 12px/140% "Microsoft YaHei","Î¢ï¿½ï¿½ï¿½Åºï¿½",Helvetica,"ï¿½ï¿½ï¿½ï¿½",Arial,Tahoma;margin: 0;text-align: left;}
 
 .main{
 	margin:7em auto 0;
@@ -121,7 +121,7 @@ form{
 	background:url(../img/spirit.png)  no-repeat 0px 0px;
 }
 .into{
-	background:url(../img/spirit.png)  no-repeat -31px 0px;
+	background:url(../img/spirit.png)  no-repeat 0px 0px;
 }
 
 .left-form submit{
