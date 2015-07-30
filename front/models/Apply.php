@@ -35,6 +35,6 @@ class Apply extends ActiveRecord
      */
     public function attributes()
     {
-    	return array_merge(parent::attributes(), ['api_name', 'type', 'api_url']);
+    	return array_merge(parent::attributes(), ['api_name', 'type', 'api_url','secret_key']);
     }
 }

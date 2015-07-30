@@ -14,7 +14,7 @@ $this->title = '接口申请列表';
 	        <th>申请时间</th>
 	        <th>审核状态</th>
 	        <th>审核时间</th>
-	        <th>操作</th>
+	        <th>密钥</th>
 	    </tr>
 	    </thead>
 	    <?php if(!empty($list)){?>
@@ -27,21 +27,20 @@ $this->title = '接口申请列表';
 			        <td><?php echo $val['created_at'];?></td>
 			        <td><?php echo $val['is_agree'];?></td>             
 			        <td><?php echo $val['agree_time'];?></td>        
-			        <td>
-			        	<?php 
-			        		if($val['is_agree']=='通过'){
-			        			echo '<a disabled class="key" style="cursor: pointer;">查看密钥</a>';
-			        		}else{
-			        			echo '<a disabled>查看密钥</a>';
-			        		}
-			        	?>
-			        </td>        
+			        <td><?php echo $val['secret_key'];?></td>        
 			    </tr>   
 			<?php }?>
 		<?php }else{?>
 				<tr><td colspan="8" style="text-align:center">暂无接口申请记录</td></tr>
 		<?php }?>
 	</table>
+</div>
+<div id='pop-div' style="width: 300px;" class="pop-box"> 
+      <div class="pop-box-body" > 
+	      <p id="list_key"> 
+	            
+	      </p>
+      </div> 
 </div>
 <script>
 $(function(){
@@ -54,7 +53,8 @@ $(function(){
 			dataType : 'json',
 			success : function(e){
 				if(e.success){
-					alert('获取成功!\n密钥:'+e.key);
+					$("#list_key").html('密钥:'+e.key);
+					popupDiv('pop-div');
 					return false;
 				}else{
 					alert('获取失败');

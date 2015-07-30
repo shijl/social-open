@@ -12,7 +12,7 @@ class ApplyController extends BaseController
 	public $enableCsrfValidation = false;
 	public function actionIndex(){
 		$user_id = Yii::$app->getUser()->getIdentity()->id;
-		$sql = "select apply.id,apply.rate,apply.is_agree,apply.created_at,apply.agree_time,api.api_name,api.api_url,api.type from op_api_apply as apply left join op_api as api on apply.aid = api.id where uid = '".$user_id."' order by apply.created_at desc";
+		$sql = "select apply.id,apply.rate,apply.is_agree,apply.created_at,apply.agree_time,api.api_name,api.api_url,api.type,api.type,op_key.secret_key from op_api_apply as apply left join op_api as api on apply.aid = api.id left join op_key on apply.id = op_key.apply_id where uid = '".$user_id."' order by apply.created_at desc";
 		$query = Apply::findBySql($sql)->all();
 		$output=[];
 		foreach($query as $model){
@@ -25,7 +25,9 @@ class ApplyController extends BaseController
 			'is_agree' =>(!empty($model->is_agree)?(($model->is_agree=='1')?"通过":"未通过"):'待审核'),
 			'created_at' =>$model->created_at?date("Y-m-d H:i:s",$model->created_at):'',
 			'agree_time' =>$model->agree_time?date("Y-m-d H:i:s",$model->agree_time):'',
+			'secret_key'=>$model->secret_key,
 			];
+			
 			$output[]=$item;
 		}
 		return $this->render('index',['list'=>$output]);
@@ -49,7 +51,7 @@ class ApplyController extends BaseController
 		}
 		echo json_encode(array('success'=>true));die;
 	}
-	public function actionGetKey(){
+	public function getKey(){
 		$id = Yii::$app->getRequest()->post('id');
 		$sql = "select secret_key from op_key where apply_id = $id";
 		$result = Yii::$app->db->createCommand($sql)->queryOne();
