@@ -25,20 +25,31 @@ class Secret
 		return Yii::$app->db->createCommand($sql)->queryAll();
 	}
 	
+	public function get_info_applyid($ids)
+	{
+		if(empty($ids))
+			return false;
+	
+		$sql = "select * from op_key where apply_id in ($ids)";
+	
+		return Yii::$app->db->createCommand($sql)->queryAll();
+	}
+	
 	public function get_list($params=array(), $page=1, $rows=10)
 	{
-		$sql = "select count(1) as num from op_key";
-		$db = Yii::$app->db;
-		$total = $db->createCommand($sql)->queryOne();
-	
-		$sql = "select * from op_key ";
-		
 		if(!empty($params) && is_array($params)) {
-			foreach ($params as $pk=>$pv) 
+			foreach ($params as $pk=>$pv)
 				$tmp[] = $pk.'='.$pv;
 		}
 		$query_str = !empty($tmp) ? implode(" and ", $tmp) : '';
 		
+		$sql = "select count(1) as num from op_key";
+		$db = Yii::$app->db;
+		if(!empty($query_str))
+			$sql .= "where ".$query_str;
+		$total = $db->createCommand($sql)->queryOne();
+	
+		$sql = "select * from op_key ";
 		if(!empty($query_str))
 			$sql .= "where ".$query_str;
 		$sql .= " order by created_at desc ";

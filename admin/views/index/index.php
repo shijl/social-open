@@ -51,6 +51,12 @@
 							<li iconCls="icon-gears"><a class="e-link" href="#" onclick="open1('秘钥管理','/admin.php/secret/list')">秘钥管理</a></li>
 						</ul>
 				</li>
+				<li iconCls="icon-base">
+					<span>接口访问日志</span>
+						<ul>
+							<li iconCls="icon-gears"><a class="e-link" href="#" onclick="open1('接口访问频次','/admin.php/monitor/list')">接口访问频次</a></li>
+						</ul>
+				</li>
 				<li iconCls="icon-gears"><a class="e-link" href="/admin.php/login/logout">退出</a></li>
 				
 			</ul>

@@ -24,6 +24,7 @@ class set_user extends process
 			}
 			foreach ($process as $pk=>$pv) {
 				$process[$pk]['username'] = isset($user_info[$pv['uid']]['username']) ? $user_info[$pv['uid']]['username'] : '';
+				$process[$pk]['project'] = isset($user_info[$pv['uid']]['project']) ? $user_info[$pv['uid']]['project'] : '';
 				$process[$pk]['department'] = isset($user_info[$pv['uid']]['department']) ? $user_info[$pv['uid']]['department'] : '';
 			}
 		}

@@ -27,17 +27,20 @@ class Api
 	
 	public function get_list($params=array(), $page=1, $rows=10)
 	{
-		$sql = "select count(1) as num from op_api";
-		$db = Yii::$app->db;
-		$total = $db->createCommand($sql)->queryOne();
-	
-		$sql = "select * from op_api ";
-	
 		if(!empty($params) && is_array($params)) {
 			foreach ($params as $pk=>$pv)
 				$tmp[] = $pk.'='.$pv;
 		}
 		$query_str = !empty($tmp) ? implode(" and ", $tmp) : '';
+		
+		$sql = "select count(1) as num from op_api ";
+		if(!empty($query_str))
+			$sql .= "where ".$query_str;
+		
+		$db = Yii::$app->db;
+		$total = $db->createCommand($sql)->queryOne();
+	
+		$sql = "select * from op_api ";
 	
 		if(!empty($query_str))
 			$sql .= "where ".$query_str;
