@@ -25,20 +25,32 @@ class Api_apply
 		return Yii::$app->db->createCommand($sql)->queryAll();
 	}
 	
+	public function get_info_aid($aids)
+	{
+		if(empty($aids))
+			return false;
+	
+		$sql = "select * from op_api_apply where is_agree=1 and aid in ($aids)";
+	
+		return Yii::$app->db->createCommand($sql)->queryAll();
+	}
+	
 	public function get_list($params=array(), $page=1, $rows=10)
 	{
-		$sql = "select count(1) as num from op_api_apply";
-		$db = Yii::$app->db;
-		$total = $db->createCommand($sql)->queryOne();
-	
-		$sql = "select * from op_api_apply ";
-		
 		if(!empty($params) && is_array($params)) {
-			foreach ($params as $pk=>$pv) 
+			foreach ($params as $pk=>$pv)
 				$tmp[] = $pk.'='.$pv;
 		}
 		$query_str = !empty($tmp) ? implode(" and ", $tmp) : '';
 		
+		$sql = "select count(1) as num from op_api_apply ";
+		$db = Yii::$app->db;
+		if(!empty($query_str))
+			$sql .= "where ".$query_str;
+		
+		$total = $db->createCommand($sql)->queryOne();
+		
+		$sql = "select * from op_api_apply ";
 		if(!empty($query_str))
 			$sql .= "where ".$query_str;
 		
@@ -47,7 +59,7 @@ class Api_apply
 			$page = ($page-1)*$rows;
 			$sql .= " limit $page, $rows";
 		}
-	
+		
 		$re = $db->createCommand($sql)->queryAll();
 		common\multi::get_multi($re);
 	
