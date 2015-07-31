@@ -10,6 +10,7 @@ class IndexController extends Controller
 	
 	public function actionIndex()
 	{
+		
 		$key = isset($_GET['key']) ? $_GET['key'] : '';
 		if(empty($key)) {
 			echo json_encode(array('code'=>10001,'data'=>'秘钥为空'));
@@ -21,6 +22,8 @@ class IndexController extends Controller
 			echo json_encode(array('code'=>10002,'data'=>'秘钥不存在'));
 			exit;
 		}
+		$rate_obj = new \app\modules\api\redis\Rate();
+		@$rate_obj->stat($key);
 		// 查找apply_id
 		$apply_id = $result['apply_id'];
 		$apply_obj = new \app\modules\api\models\Api_apply();
@@ -50,7 +53,6 @@ class IndexController extends Controller
 			exit;
 		}
 		// 判断速率
-		$rate_obj = new \app\modules\api\redis\Rate();
 		$rate = Yii::$app->params['rate_value'][$apply_re['rate']];
 		if(!($rate_obj->check_rate($key, $rate))){
 			echo json_encode(array('code'=>10008,'data'=>'接口请求次数过多'));

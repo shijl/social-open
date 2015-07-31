@@ -24,4 +24,5 @@ class Api_apply
 	
 		return Yii::$app->db->createCommand($sql)->queryAll();
 	}
+
 }
