@@ -8,6 +8,7 @@
 $('#monitor-list').datagrid({
 	url:'/admin.php/monitor/list?ajax=1',
 	title:'接口访问频次',
+	striped:true,
 	view: detailview,
 	detailFormatter:function(index,row){
 		return '<div style="padding:2px"><table class="ddv"></table></div>';
@@ -20,7 +21,15 @@ $('#monitor-list').datagrid({
         {field:'api_status',title:'接口状态',width:80,align:'center'},
         {field:'created_time',title:'创建时间',width:160,align:'center'},
         {field:'updated_time',title:'修改时间',width:160,align:'center'},
-        {field:'all_num',title:'最高访问次数/mins',width:100,align:'center'},
+        {field:'all_num',title:'最高访问次数/mins',width:100,align:'center',
+			formatter:function(value, rowData, index){
+				if(value > rowData.rate_limit){
+					return '<span style="background-color:red;">'+value+'</span>';
+				} else {
+					return value;
+				}
+			}
+        },
             
         {field:'operation',title:'操作',width:80,align:'center',
             formatter:function(value, rowData, index){
@@ -36,7 +45,7 @@ $('#monitor-list').datagrid({
 	          
 	]],
 	onExpandRow: function(index,row){
-        var ddv = $(this).datagrid('getRowDetail',index).find('table.ddv');
+        ddv = $(this).datagrid('getRowDetail',index).find('table.ddv');
         ddv.datagrid({
             url:'/admin.php/monitor/item?id='+row.id,
             fitColumns:true,
@@ -48,17 +57,29 @@ $('#monitor-list').datagrid({
                 {field:'username',title:'使用人',width:40,align:'center'},
                 {field:'project',title:'项目名',width:100,align:'center'},
                 {field:'department',title:'部门',width:100,align:'center'},
-                {field:'qq',title:'QQ',width:40,align:'center'},
-                {field:'access_num',title:'最高访问次数/mins',width:50,align:'center'},
+                {field:'rate_val',title:'申请峰值',width:40,align:'center'},
+                {field:'access_num',title:'最高访问次数/mins',width:50,align:'center', 
+                	formatter:function(value, rowData, index){
+        				if(value > rowData.rate_num_val){
+        					return '<span style="background-color:red;">'+value+'</span>';
+        				} else {
+        					return value;
+        				}
+        			}
+                },
                 {field:'operation',title:'操作',width:100,align:'center',
                     formatter:function(value, rowData, index){
-                        var enable = '<a href="#" onclick="status(\''+rowData.id+'\', 1)">启用</a>';
-                        var disable = '<a href="#" onclick="status(\''+rowData.id+'\', 2)">停用</a>';
-                        if(rowData.status == 1) {
-                        	return disable;
+                    	var agree = '<a href="#" onclick="agree(\''+rowData.id+'\', 1)">通过</a>';
+                        var unagree = '<a href="#" onclick="agree(\''+rowData.id+'\', 2)">不通过</a>';
+                        var deal = '';
+                        if(rowData.is_agree == 0) {
+                        	deal = agree + ' | ' + unagree;
+                        } else if (rowData.is_agree == 1) {
+                        	deal = unagree;
                         } else {
-                        	return enable;
+                        	deal = agree;
                         }
+        				return deal;
         			}
                 }
             ]],
@@ -78,4 +99,27 @@ $('#monitor-list').datagrid({
     pagination:true,
     rownumbers:true
 });
+function status(id,status)
+{
+	$.getJSON('/admin.php/api/status', {id:id,status:status}, function(data){
+		if(data.code == 10000){
+			$.messager.alert('提示','保存成功');
+		} else {
+			$.messager.alert('提示','保存失败');
+		}
+		$('#monitor-list').datagrid('reload');
+	});
+}
+
+function agree(id,status)
+{
+	$.getJSON('/admin.php/apply/agree', {id:id,status:status}, function(data){
+		if(data.code == 10000){
+			$.messager.alert('提示','保存成功');
+		} else {
+			$.messager.alert('提示','保存失败');
+		}
+		ddv.datagrid('reload');
+	});
+}
 </script>

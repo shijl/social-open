@@ -1,6 +1,6 @@
 <table id="api-list"></table>
 
-<div id="list-dd" class="easyui-dialog" style="width:400px;height:280px;padding:10px 20px" closed="true" buttons="#dlg-buttons">
+<div id="list-dd" class="easyui-dialog" style="width:400px;height:290px;padding:10px 20px" closed="true" buttons="#dlg-buttons">
 		<div class="ftitle">增加接口</div>
         <form id="fm" method="post" novalidate>
            <div class="fitem">
@@ -12,6 +12,10 @@
 	                <tr>
 	                    <td>接口地址:</td>
 	                    <td><input class="easyui-textbox" type="text" name="api_url" data-options="required:true"></input></td>
+	                </tr>
+	                <tr>
+	                    <td>速率限制:</td>
+	                    <td><input class="easyui-textbox" type="text" name="rate_limit" data-options="required:true"></input></td>
 	                </tr>
 	                <tr>
 	                    <td>类型:</td>
@@ -46,14 +50,15 @@ $('#api-list').datagrid({
 	}],
     columns:[[
 		{field:'id', hidden:true,width:20},
-        {field:'api_name',title:'接口名称',width:200,align:'center'},
+        {field:'api_name',title:'接口名称',width:180,align:'center'},
         {field:'api_url',title:'接口地址',width:200,align:'center'},
         {field:'api_type',title:'接口类型',width:100,align:'center'},
         {field:'api_status',title:'接口状态',width:100,align:'center'},
+        {field:'rate_limit',title:'速率限制',width:60,align:'center'},
         {field:'created_time',title:'创建时间',width:180,align:'center'},
         {field:'updated_time',title:'修改时间',width:180,align:'center'},
             
-        {field:'operation',title:'操作',width:100,align:'center',
+        {field:'operation',title:'操作',width:50,align:'center',
             formatter:function(value, rowData, index){
                 var enable = '<a href="#" onclick="status(\''+rowData.id+'\', 1)">启用</a>';
                 var disable = '<a href="#" onclick="status(\''+rowData.id+'\', 2)">停用</a>';

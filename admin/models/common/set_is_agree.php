@@ -15,6 +15,8 @@ class set_is_agree
 			foreach ($process as $pk=>$pv) {
 				$process[$pk]['agree_status'] = $agree_arr[$pv['is_agree']];
 				$process[$pk]['rate_val'] = $rate['value'][$pv['rate']].$rate['unit'];
+				$process[$pk]['rate_num_val'] = $rate['value'][$pv['rate']];
+				
 			}
 		}
 	}
