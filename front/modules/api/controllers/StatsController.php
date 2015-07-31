@@ -11,7 +11,7 @@ class StatsController extends Controller
 	public function actionIndex(){
 		//$redis_key = 'YmRnaGtucHN2d0JDR0pNTk9RVVZXMDI4_1438326001';
 		//$result = @Yii::$app->redis->ZREVRANGE($redis_key,0,0,(WITHSCORES));
-		$hour = isset($_GET['hour']) ? $_GET['hour'] : '17';
+		$hour = isset($_GET['hour']) ? $_GET['hour'] : '';
 		if(empty($hour)){
 			return false;
 		}
