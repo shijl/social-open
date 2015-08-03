@@ -26,7 +26,7 @@ class Stats extends ActiveRecord
     public function rules()
     {
     	return [
-    		[['secret_key', 'access_num','stat_time','create_time'], 'required'],
+    		[['secret_key_id', 'access_num','stat_time','create_time'], 'required'],
     	];
     }
 

@@ -26,7 +26,7 @@ class Secret
 	}
 	public function get_keys_info()
 	{
-		$sql = "select secret_key from op_key";
+		$sql = "select secret_key,id from op_key";
 		return Yii::$app->db->createCommand($sql)->queryAll();
 	}
 }
