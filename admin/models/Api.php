@@ -78,14 +78,16 @@ class Api
 		$api_name = $api_info['api_name'];
 		$api_url = $api_info['api_url'];
 		$type = $api_info['type'];
+		$rate_limit = $api_info['rate_limit'];
 		$time = time();
 	
-		$sql = "insert into op_api (api_name, api_url, type, created_at)
-		values (:api_name, :api_url, :type, $time)";
+		$sql = "insert into op_api (api_name, api_url, type, rate_limit, created_at)
+		values (:api_name, :api_url, :type, :rate_limit, $time)";
 		$command = Yii::$app->db->createCommand($sql);
 		$command->bindParam(':api_name', $api_name, \PDO::PARAM_STR);
 		$command->bindParam(':api_url', $api_url, \PDO::PARAM_STR);
 		$command->bindParam(':type', $type, \PDO::PARAM_INT);
+		$command->bindParam(':rate_limit', $rate_limit, \PDO::PARAM_INT);
 	
 		return $command->execute();
 	}
