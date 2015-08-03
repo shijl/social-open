@@ -24,7 +24,7 @@ $('#monitor-list').datagrid({
         {field:'all_num',title:'最高访问次数/mins',width:100,align:'center',
 			formatter:function(value, rowData, index){
 				if(value > rowData.rate_limit){
-					return '<span style="background-color:red;">'+value+'</span>';
+					return '<span style="color:red;">'+value+'</span>';
 				} else {
 					return value;
 				}
@@ -61,7 +61,7 @@ $('#monitor-list').datagrid({
                 {field:'access_num',title:'最高访问次数/mins',width:50,align:'center', 
                 	formatter:function(value, rowData, index){
         				if(value > rowData.rate_num_val){
-        					return '<span style="background-color:red;">'+value+'</span>';
+        					return '<span style="color:red;">'+value+'</span>';
         				} else {
         					return value;
         				}
@@ -96,8 +96,6 @@ $('#monitor-list').datagrid({
         });
         //$('#monitor-list').datagrid('fixDetailRowHeight',index);
     },
-    pagination:true,
-    rownumbers:true
 });
 function status(id,status)
 {
