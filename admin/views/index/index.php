@@ -44,16 +44,11 @@
 		<div region="west" split="true" title="Menu" style="width:250px;padding:5px;">
 			<ul class="easyui-tree">
 				<li iconCls="icon-base">
-					<span>接入申请管理</span>
+					<span>接口申请管理</span>
 						<ul>
 							<li iconCls="icon-gears"><a class="e-link" href="#" onclick="open1('接口管理','/admin.php/api/list')">接口管理</a></li>
 							<li iconCls="icon-gears"><a class="e-link" href="#" onclick="open1('接入申请列表','/admin.php/apply/list')">接入申请列表</a></li>
 							<li iconCls="icon-gears"><a class="e-link" href="#" onclick="open1('秘钥管理','/admin.php/secret/list')">秘钥管理</a></li>
-						</ul>
-				</li>
-				<li iconCls="icon-base">
-					<span>接口访问日志</span>
-						<ul>
 							<li iconCls="icon-gears"><a class="e-link" href="#" onclick="open1('接口访问频次','/admin.php/monitor/list')">接口访问频次</a></li>
 						</ul>
 				</li>

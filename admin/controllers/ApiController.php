@@ -49,6 +49,7 @@ class ApiController extends BackController
 			$api_name = !empty($_POST['api_name']) ? $_POST['api_name'] : '';
 			$api_url = !empty($_POST['api_url']) ? $_POST['api_url'] : '';
 			$type = !empty($_POST['type']) ? $_POST['type'] : '';
+			$rate_limit = !empty($_POST['rate_limit']) ? $_POST['rate_limit'] : '';
 			if(empty($api_name)) {
 				echo json_encode(array('code'=>10001, 'message'=>'接口名称为空'));
 				exit;
@@ -61,6 +62,10 @@ class ApiController extends BackController
 				echo json_encode(array('code'=>10003, 'message'=>'接口类型为空'));
 				exit;
 			}
+			if(empty($rate_limit)) {
+				echo json_encode(array('code'=>10004, 'message'=>'速率限制为空'));
+				exit;
+			}
 			// 判断是否存在
 			
 			$api_obj = new \app\models\Api();
@@ -71,7 +76,8 @@ class ApiController extends BackController
 			$api_info = [
 				'api_name'=>$api_name,
 				'api_url'=>$api_url,
-				'type'=>$type
+				'type'=>$type,
+				'rate_limit'=>$rate_limit
 			];
 			$re = $api_obj->save_api($api_info);
 			if(!$re) {
