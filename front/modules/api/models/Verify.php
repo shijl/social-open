@@ -26,8 +26,7 @@ class Verify
 		$this->applyVerify();
 		$this->userVerify();
 		$this->apiVerify();
-		$this->rateVerify($key);
-		
+		$this->rateVerify($key);		
 	}
 	/**
 	 * 密钥验证

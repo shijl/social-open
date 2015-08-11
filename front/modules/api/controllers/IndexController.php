@@ -11,7 +11,6 @@ class IndexController extends Controller
 	
 	public function actionIndex()
 	{
-		
 		$key = isset($_GET['key']) ? $_GET['key'] : '';
 		$verify = new Verify($key);
 		echo $this->request($verify->api_url,$_GET,'GET');
@@ -25,25 +24,22 @@ class IndexController extends Controller
 		curl_setopt($ci, CURLOPT_TIMEOUT, 3);			//等待响应的时间
 		curl_setopt($ci, CURLOPT_RETURNTRANSFER, true);	//获取结果作为字符串返回
 		curl_setopt($ci, CURLOPT_SSL_VERIFYPEER, false);//支持SSL加密
-		curl_setopt($ci, CURLOPT_HEADER, false);		//获取返回头信息
-		switch ($method)
-		{
+		curl_setopt($ci, CURLOPT_HEADER, false);//获取返回头信息
+		switch ($method){
 			case 'POST':
 				curl_setopt($ci, CURLOPT_POST, TRUE);
-				if (!empty($params))
-				{
+				if(!empty($params)){
 					curl_setopt($ci, CURLOPT_POSTFIELDS, http_build_query($params));
 				}
 				break;
 			case 'GET':
-				if (!empty($params))
-				{
+				if(!empty($params)){
 					$url = $url . (strpos($url, '?') ? '&' : '?')
 					. (is_array($params) ? http_build_query($params) : $params);
 				}
 				break;
 		}
-		curl_setopt($ci, CURLOPT_URL, $url);
+		curl_setopt($ci,CURLOPT_URL,$url);
 		$response = curl_exec($ci);
 		curl_close ($ci);
 		return $response;

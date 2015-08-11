@@ -12,6 +12,7 @@ class Rate
 		$redis = Yii::$app->redis;
 		//先查询
 		$result = $this->get_rate($key);
+		var_dump($result);
 		if(empty($result)) {
 			return $redis->setex($key1,60,1);
 		} else {
@@ -29,7 +30,6 @@ class Rate
 	{
 		$rate_re = $this->get_rate($key);
 		if($rate_re >= $rate){
-			
 			return false;
 		} else {
 			$this->set_rate($key);
