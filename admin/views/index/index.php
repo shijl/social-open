@@ -58,6 +58,12 @@
 						<li iconCls="icon-gears"><a class="e-link" href="#" onclick="open1('项目接入管理','/admin.php/project/list')">项目接入管理</a></li>
 					</ul>
 				</li>
+				<li iconCls="icon-base">
+					<span>第三方接入管理</span>
+					<ul>
+						<li iconCls="icon-gears"><a class="e-link" href="#" onclick="open1('第三方接入管理列表','/admin.php/access/other')">第三方接入管理列表</a></li>
+					</ul>
+				</li>
 				<li iconCls="icon-gears"><a class="e-link" href="/admin.php/login/logout">退出</a></li>
 				
 			</ul>
