@@ -52,6 +52,12 @@
 							<li iconCls="icon-gears"><a class="e-link" href="#" onclick="open1('接口访问频次','/admin.php/monitor/list')">接口访问频次</a></li>
 						</ul>
 				</li>
+				<li iconCls="icon-base">
+					<span>系统策略</span>
+					<ul>
+						<li iconCls="icon-gears"><a class="e-link" href="#" onclick="open1('项目接入管理','/admin.php/project/list')">项目接入管理</a></li>
+					</ul>
+				</li>
 				<li iconCls="icon-gears"><a class="e-link" href="/admin.php/login/logout">退出</a></li>
 				
 			</ul>

@@ -11,7 +11,7 @@ class MonitorController extends BackController
 			$page = isset($_POST['page']) ? $_POST['page'] : 1;
 			$rows = isset($_POST['rows']) ? $_POST['rows'] : 10;
 			$api_obj = new \app\models\Api();
-			$data = $api_obj->get_list([],$page,$rows);
+			$data = $api_obj->get_list([],0,0);
 			
 			if(!$data) {
 				echo '查询失败';
@@ -96,7 +96,7 @@ class MonitorController extends BackController
 		// 查询每个secret_key的历史访问峰值
 		foreach ($secret_info as $sk=>$sv) {
 			// 查询一个最多的值
-			$num = $stat_obj->get_most_num('secret_key', $sv['secret_key']);
+			$num = $stat_obj->get_most_num('secret_key_id', $sv['id']);
 			$sv['access_num'] = $num;
 			$secret_tmp[$sv['apply_id']] = $sv;
 		}
