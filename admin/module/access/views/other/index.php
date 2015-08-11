@@ -11,7 +11,7 @@ $('#other-access-list').datagrid({
 		handler:addAccess,
 	}],
     columns:[[
-		{field:'id', hidden:true,width:20},
+		{field:'id', title:'ID',width:20},
         {field:'project_name',title:'项目名称',width:200,align:'center'},
         {field:'leader',title:'项目负责人',width:150,align:'center'},
         {field:'qq',title:'负责人qq',width:150,align:'center'},
